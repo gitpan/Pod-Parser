@@ -48,15 +48,15 @@
    to pass the callback method an array of lines or of paragraphs (rather
    than one input block at a time) if certain options are specified.
 
+ * In Pod::Checker, check that =encoding specifies a valid encoding;
+   possibly by using the Encode module?
+
  * Add a check of Perl core pods (as suggested by M. Schwern):
    The follow test runs each pod/*.pod file through Pod::Checker and fails
    if there are any warnings or errors.  There are a handful of errors and 
    huge amounts of warnings.
    This patch should not be applied to the main sources until the warnings 
    are cleaned up.
-
- * In Pod::Checker, check that =encoding specifies a valid encoding;
-   possibly by using the Encode module?
 
 --- t/pod/corepods.t	2002/12/10 22:36:52	1.1
 +++ t/pod/corepods.t	2002/12/10 23:21:25

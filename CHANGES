@@ -3,6 +3,39 @@ ATTENTION!
 Before using this for any _new_ software, please consider using Pod::Simple,
 it is a modern replacement for this module.
 
+ 16-Jan-2011           Marek Rouchal                        <marekr@cpan.org>
+ -----------------------------------------------------------------------------
+ Version 1.50
+ + fix whitespace (esp. CR [\r] related) issues with different Perl versions
+   on Windows (with Perl 5.8.8 [Activestate], and 5.6.1 [SUA])
+ + merge latest core (5.14.x) changes to this distro
+ + CPAN#73446: fix minor POD error in InputObjects.pm
+ + CPAN#43955: podchecker fails to detect superfluous =cut directive:
+   implemented (and extended by a check for superfluous =pod commands) and
+   documented in Pod::Checker; also added a note in the POD of all modules
+   that they are part of the Pod::Parser distribution
+ + CPAN#46695: use consistent version (1.50) for distribution and all Pod::
+   modules in this distro (except for Pod::PlainText, which stays at 2.05)
+ + CPAN#52086: mismatch between distro and module version:
+   same as above
+ + CPAN#55121: correction for Pod::Find and t/pod/find.t on VMS
+ + CPAN#47473: podchecker on L<> url with alt text
+   ... causes an error in Pod::Checker now
+ + CPAN#57954: Pod::Usage does not find perldoc when perl is relocatable
+   ... use $Config{scriptdirexp} instead of scriptdir
+ + CPAN#61223: podchecker notice missing blank line before command
+   implemented with more tests in poderrs.t and self test of all *.pms
+ + CPAN#66614: parse of no final newline vs perl -w
+   ... a rare case, but fixed nevertheless
+ + CPAN#68157: Pod-Parser-1.38/lib/Pod/Usage.pm question/bug
+   ... pass through formatting options to Pod::Text
+ + CPAN#70771: mishandles symbolic links in @INC
+   ... fixed by making the paths in @INC absolute, using Cwd::abs_path()
+ + CPAN#71139: 3 possible optimisations
+   ... applied
+ + several other rt.cpan.org tickets processed and closed
+
+
  09-Feb-2008           Marek Rouchal                        <marekr@cpan.org>
  -----------------------------------------------------------------------------
  Version 1.38
