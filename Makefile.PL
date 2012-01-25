@@ -73,7 +73,7 @@ if ($] < 5.005) {
 WriteMakefile(
     NAME         => $DISTMOD,
     DISTNAME     => $DISTNAME,
-    VERSION      => '1.50',
+    VERSION      => '1.51',
     INSTALLDIRS  => ($] >= 5.006 ? 'perl' : 'site'),
     PL_FILES     => { map { (script("$_.PL") => script($_)) } @SCRIPTS },
     EXE_FILES    => [ @EXE_FILES ],
@@ -83,6 +83,7 @@ WriteMakefile(
     PREREQ_PM    => \%prereq,
     ($] >= 5.005 ?    ## Add these new keywords supported since 5.005
        (ABSTRACT   => 'Modules for parsing/translating POD format documents',
-        AUTHOR     => 'Brad Appleton <bradapp@enteract.com>') : ()),
+        AUTHOR     => [ 'Brad Appleton <bradapp@enteract.com>',
+                        'Marek Rouchal <marekr@cpan.org>' ] ) : ()),
 );
 

@@ -3,7 +3,20 @@ ATTENTION!
 Before using this for any _new_ software, please consider using Pod::Simple,
 it is a modern replacement for this module.
 
- 16-Jan-2011           Marek Rouchal                        <marekr@cpan.org>
+ 25-Jan-2012           Marek Rouchal                        <marekr@cpan.org>
+ -----------------------------------------------------------------------------
+ Version 1.51
+ + CPAN#74271: Pod::Parser should not flag L<text|hyperlink>
+   undo change CPAN#47473: L<alt text|URL> _is_ allowed (see discussion on
+   pod-people and p5p); confirmed by blead change; references:
+   http://code.activestate.com/lists/perl-pod-people/1690/
+   http://code.activestate.com/lists/perl-pod-people/1393/
+   http://perl5.git.perl.org/perl.git/commit/f6e963e4dd62b8e3c01b31f4a4dd57e47e104997
+ + bump all module versions (except Pod::PlainText) to 1.51
+ + update META.yml (thanks rjbs for the hint)
+
+
+ 16-Jan-2012           Marek Rouchal                        <marekr@cpan.org>
  -----------------------------------------------------------------------------
  Version 1.50
  + fix whitespace (esp. CR [\r] related) issues with different Perl versions
