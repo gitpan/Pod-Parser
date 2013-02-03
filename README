@@ -20,17 +20,6 @@
    Please see the POD documentation for this module (embedded in the
    file "Select.pm") and Pod::Parser for more details.
 
- Pod::Usage
- ----------
-   The Perl5 module "Pod::Usage" which provides the function "pod2usage()"
-   to print usage messages for a Perl script based on its embedded pod
-   documentation. Pod::Usage is a subclass of Pod::PlainText. Please see
-   the POD documentation for this module (embedded in the file "Usage.pm")
-   for more details. The pod2usage() function is probably the most
-   generally useful function in this entire distribution since it is
-   useful to just about any Perl5 script that is invoked from the
-   command-line.
-
  Pod::PlainText
  --------------
    A replacement for the Perl5 module "Pod::Text" and the corresponding
@@ -50,15 +39,6 @@
  -----------------
    Some input objects needed by Pod::Parser, and for advanced users of
    Pod::Parser that need more about a command besides its name and text.
-
- Pod::Checker
- ------------
-   A module to check the syntax of a POD document. It is just in the
-   very beginning stages right now and is *far* from being thorough or
-   complete. Its just a starting point that I hope others who plan to
-   use it can help me flesh it out further.
-   This module also collects information about hyperlink nodes of the
-   document processed that can be used by converters later on.
 
  Pod::ParseUtils
  ---------------
@@ -153,7 +133,7 @@
  * Perl version 5.005 or later
 
  * File::Spec from CPAN (already bundled in Perl 5.005)
-   at least version 0.8, previous ones lack some functions needed here
+   at least version 0.82, previous ones lack some functions needed here
 
 
  BUILDING & INSTALLING

@@ -24,18 +24,14 @@ use ExtUtils::MakeMaker;
 $DISTNAME  = "Pod-Parser";    ## The "product" name for this distribution
 $DISTMOD   = 'Pod::Parser';  ## The "title" module of this distribution
 @MODULES   = ( $DISTMOD,     ## Other modules in this distribution
-               qw( Pod::Checker
-                   Pod::InputObjects
+               qw( Pod::InputObjects
                    Pod::PlainText
                    Pod::Select
-                   Pod::Usage
                  )
              );
 
 ## The executable scripts to be installed
-@SCRIPTS   = qw( podchecker
-                 podselect
-                 pod2usage
+@SCRIPTS   = qw( podselect
                );
 sub script($) { File::Spec->catfile ('scripts', @_) }
 my @EXE_FILES = ();
@@ -73,7 +69,7 @@ if ($] < 5.005) {
 WriteMakefile(
     NAME         => $DISTMOD,
     DISTNAME     => $DISTNAME,
-    VERSION      => '1.51',
+    VERSION      => '1.60',
     INSTALLDIRS  => ($] >= 5.006 ? 'perl' : 'site'),
     PL_FILES     => { map { (script("$_.PL") => script($_)) } @SCRIPTS },
     EXE_FILES    => [ @EXE_FILES ],
@@ -83,7 +79,6 @@ WriteMakefile(
     PREREQ_PM    => \%prereq,
     ($] >= 5.005 ?    ## Add these new keywords supported since 5.005
        (ABSTRACT   => 'Modules for parsing/translating POD format documents',
-        AUTHOR     => [ 'Brad Appleton <bradapp@enteract.com>',
-                        'Marek Rouchal <marekr@cpan.org>' ] ) : ()),
+        AUTHOR     => 'Brad Appleton <bradapp@enteract.com>, Marek Rouchal <marekr@cpan.org>' ) : ()),
 );
 
