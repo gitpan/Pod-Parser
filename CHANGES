@@ -3,6 +3,13 @@ ATTENTION!
 Before using this for any _new_ software, please consider using Pod::Simple,
 it is a modern replacement for this module.
 
+ 02-Feb-2014           Marek Rouchal                        <marekr@cpan.org>
+ -----------------------------------------------------------------------------
+ Version 1.62
+ + CPAN#87891: More sanity checks in podselect()
+   documentation patches by florent.angly@gmail.com, and a bit of stricter
+   checking what clients pass to podselect()
+
  01-Jun-2013           Marek Rouchal                        <marekr@cpan.org>
  -----------------------------------------------------------------------------
  Version 1.61

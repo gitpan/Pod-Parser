@@ -5,6 +5,13 @@
  Perl5 "pod" (Plain Old Documentation).  See the "perlpod" and "perlsyn"
  manual pages from your Perl5 distribution for more information about pod.
 
+ DISCLAIMER
+ ----------
+ This package is considered to be legacy - it has been superseded by 
+ Pod::Simple which brings more robustness, unicode and various other
+ benefits. If you are building anything new, please consider using
+ Pod::Simple, not this package.
+
  Pod::Parser
  -----------
    The Perl5 module "Pod::Parser", which provides a base class for
@@ -101,8 +108,8 @@
       http://www.perl.com/CPAN/src/latest.tar.gz
 
 
- DISCLAIMER
- ===========
+ DISCLAIMER pt 2
+ ===============
  This software is distributed in the hope that it will be useful, but
  is provided "AS IS" WITHOUT WARRANTY OF ANY KIND, either expressed or
  implied, INCLUDING, without limitation, the implied warranties of
